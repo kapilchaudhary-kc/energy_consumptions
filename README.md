@@ -6,6 +6,7 @@ This project builds and tracks a **Linear Regression model** to predict energy c
 
 ## 📁 Project Structure
 
+```plaintext
 info/ 
 ├── data/ 
 │   ├── energy_consumption.csv 
@@ -20,6 +21,8 @@ info/
 │   └── ml-pipeline.yml 
 ├── requirements.txt 
 └── README.md
+
+```
 
 ---
 
