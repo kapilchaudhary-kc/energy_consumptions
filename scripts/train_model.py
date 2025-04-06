@@ -7,8 +7,10 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
 def read_csv():
-    df = pd.read_csv(r'C:\Users\pc\Desktop\Pract_Folder\info\data\energy_consumption.csv')
-    return df
+    path = 'data/energy_consumption.csv'
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Could not find the CSV file at: {path}")
+    return pd.read_csv(path)
 
 def preprocess(df):
     x = df.drop(columns=['timestamp','energy_consumption'])
