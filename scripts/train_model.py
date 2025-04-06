@@ -5,6 +5,7 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
+
 import os
 
 def read_csv():
@@ -28,7 +29,7 @@ def train(x,y):
         model.fit(x_train,y_train)
 
         preds = model.predict(x_test)
-        rmse = mean_squared_error(y_test, preds, squared=False)
+        rmse = mean_squared_error(y_test, preds)
         r2 = r2_score(y_test, preds)
 
         joblib.dump(model,'models/lin_reg.pkl')
