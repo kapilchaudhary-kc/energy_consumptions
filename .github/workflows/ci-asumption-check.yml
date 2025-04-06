@@ -29,14 +29,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-<<<<<<< HEAD
-      - name: Run train_model.py with MLflow logging
-        run: |
-          python scripts/train_model.py
-      - name: Run assumption check
-        run: |
-          python scripts/run_assumption_checks.py
-=======
 
       - name: Run train_model.py with MLflow logging
         run: |
@@ -46,7 +38,6 @@ jobs:
         run: |
           python scripts/run_assumption_checks.py
 
->>>>>>> 0dbea6a96fc1e3b7d9787ffc32620f9bd0d6b3ca
       - name: upload model and data artifacts
         uses: actions/upload-artifact@v4
         with:
