@@ -39,7 +39,7 @@ jobs:
           python run_assumption_checks.py
 
       - name: upload model and data artifacts
-        uses: actions/upload-artifacts@v3
+        uses: actions/upload-artifact@v3
         with:
           name: model-and-data
           path: |
@@ -47,7 +47,7 @@ jobs:
             data/processed_test_data.csv
       
       - name: upload mlflow tracking folder
-        uses: actions/upload-artifacts@v3
+        uses: actions/upload-artifact@v3
         with:
           name: mlruns
           path: |
