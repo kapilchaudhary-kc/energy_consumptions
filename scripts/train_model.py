@@ -32,6 +32,7 @@ def train(x,y):
         rmse = mean_squared_error(y_test, preds)
         r2 = r2_score(y_test, preds)
 
+        os.makedirs('models',exist_ok=True)
         joblib.dump(model,'models/lin_reg.pkl')
         mlflow.log_artifact('models/lin_reg.pkl',artifact_path='model')
     return x_test,y_test
