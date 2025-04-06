@@ -32,11 +32,11 @@ jobs:
 
       - name: Run train_model.py with MLflow logging
         run: |
-          python scripts\train_model.py
+          python scripts/train_model.py
 
       - name: Run assumption check
         run: |
-          python scripts\run_assumption_checks.py
+          python scripts/run_assumption_checks.py
 
       - name: upload model and data artifacts
         uses: actions/upload-artifact@v4
