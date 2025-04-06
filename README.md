@@ -17,7 +17,7 @@ info/
 │   ├── train_model.py 
 │   └── run_assumption_checks.py 
 ├── .github/ 
-│   └── workflows/ 
+│   └── workflows/
 │   └── ml-pipeline.yml 
 ├── requirements.txt 
 └── README.md
